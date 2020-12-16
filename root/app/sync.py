@@ -12,14 +12,13 @@ client = Client(host=HOST, username=USER, password=PASS)
 
 for torrent in client.torrents.info():
   torrent_tags = torrent.tags.split(',')
-  for status in torrent.trackers:
-    if status.status == 4:
-      if TAG not in torrent_tags:
-        print('Tagging', torrent.name,'–',status.msg)
-        torrent.addTags(TAG)
-    else:
-      if TAG in torrent_tags:
-        print('Clearing', torrent.name)
-        torrent.removeTags(TAG)
+  if any([status.status == 4 for status in torrent.trackers]):
+    if TAG not in torrent_tags:
+      print('Tagging', torrent.name)
+      torrent.addTags(TAG)
+  else:
+    if TAG in torrent_tags:
+      print('Clearing', torrent.name)
+      torrent.removeTags(TAG)
 
 print('Done.')
