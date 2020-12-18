@@ -1,4 +1,4 @@
-FROM oznu/s6-alpine:3.11
+FROM oznu/s6-alpine:3.12
 
 ENV \
     # Fail if cont-init scripts exit with non-zero code.
