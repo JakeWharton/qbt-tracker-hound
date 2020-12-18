@@ -8,10 +8,7 @@ HOST = os.environ['QBT_HOST']
 USER = os.environ['QBT_USER']
 PASS = os.environ['QBT_PASS']
 
-DHT_TRACKER_URL = '** [DHT] **'
-PEX_TRACKER_URL = '** [PeX] **'
-LSD_TRACKER_URL = '** [LSD] **'
-IGNORED_TRACKER_URLS = set([DHT_TRACKER_URL, PEX_TRACKER_URL, LSD_TRACKER_URL])
+IGNORED_TRACKER_URLS = {'** [DHT] **', '** [PeX] **', '** [LSD] **'}
 
 from qbittorrentapi import Client
 client = Client(host=HOST, username=USER, password=PASS)
