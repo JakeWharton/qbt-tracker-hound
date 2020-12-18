@@ -15,7 +15,10 @@ RUN apk add --update --no-cache python3 \
  && mkdir /var/cache/apk \
  && ln -sf python3 /usr/bin/python \
  && python -m ensurepip \
- && pip3 install --upgrade pip \
- && pip3 install qbittorrent-api
+ && pip3 install --upgrade pip
+
+COPY requirements.txt /
+RUN pip3 install -r requirements.txt \
+ && rm requirements.txt
 
 COPY root/ /
