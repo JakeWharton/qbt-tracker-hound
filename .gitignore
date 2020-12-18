@@ -1,3 +1,4 @@
 # IntelliJ IDEA
 .idea
 *.iml
+/venv
