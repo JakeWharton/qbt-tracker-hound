@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Specify `HEALTHCHECK_ID` to notify https://healthchecks.io during sync.
+
 
 ## [1.0.0] - 2020-12-24
 

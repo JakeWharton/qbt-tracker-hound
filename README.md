@@ -73,6 +73,9 @@ For help creating a valid cron specifier, visit [cron.help][cron].
 The 'Tracker Problem' tag will be used by default.
 To change it, specify your desired tag name in the `QBT_TAG` environment variable.
 
+To be notified when sync is failing visit https://healthchecks.io, create a check, and specify
+the ID to the container using the `HEALTHCHECK_ID` environment variable.
+
 
 LICENSE
 ======

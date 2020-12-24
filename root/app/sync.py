@@ -35,5 +35,3 @@ for torrent in client.torrents.info():
 		if TAG not in torrent_tags:
 			print('Tagging', torrent.name)
 			torrent.addTags(TAG)
-
-print('Done')
