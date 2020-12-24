@@ -3,7 +3,8 @@
 import os
 from qbittorrentapi import Client
 
-DEBUG = os.environ['QBT_DEBUG'] == 'true'
+DEBUG = os.environ['DEBUG'] == 'true'
+
 TAG = os.environ['QBT_TAG']
 HOST = os.environ['QBT_HOST']
 USER = os.environ['QBT_USER']
