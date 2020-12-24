@@ -3,7 +3,7 @@ FROM oznu/s6-alpine:3.12
 ENV \
     # Fail if cont-init scripts exit with non-zero code.
     S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
-    CRON="*/10 * * * *" \
+    CRON="*/5 * * * *" \
     QBT_TAG="Tracker Problem" \
     QBT_HOST="localhost:8080" \
     QBT_USER="admin" \
