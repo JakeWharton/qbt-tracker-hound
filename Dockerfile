@@ -12,15 +12,13 @@ ENV \
     QBT_PASS="adminadmin" \
     QBT_DEBUG=""
 
+COPY requirements.txt /
 RUN apk add --update --no-cache python3 curl \
  && rm -rf /var/cache/* \
  && mkdir /var/cache/apk \
  && ln -sf python3 /usr/bin/python \
  && python -m ensurepip \
- && pip3 install --no-cache-dir --upgrade pip
-
-COPY requirements.txt /
-RUN pip3 install --no-cache-dir -r requirements.txt \
- && rm requirements.txt
+ && pip3 install --no-cache-dir --upgrade pip \
+ && pip3 install --no-cache-dir -r requirements.txt
 
 COPY root/ /
