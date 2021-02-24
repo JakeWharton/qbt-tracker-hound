@@ -27,7 +27,7 @@ for torrent in client.torrents.info():
 		if tracker_working:
 			has_working_trackers = True
 
-	torrent_tags = torrent.tags.split(',')
+	torrent_tags = torrent.tags.split(', ')
 	if has_working_trackers:
 		if TAG in torrent_tags:
 			print('Clearing', torrent.name)
