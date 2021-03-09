@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [1.1.2] - 2021-02-23
+## [1.1.2] - 2021-03-09
 
 No code changes. The automatic release script was updated to push multiple tags
 and to mirror to GitHub's container registry.
