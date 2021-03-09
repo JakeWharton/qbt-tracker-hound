@@ -48,7 +48,7 @@ Start this container and point it at your qBittorrent instance with the `QBT_HOS
 ```
 $ docker run -d \
     -e "QBT_HOST=http://qbittorrent:8080" \
-    jakewharton/qbt-tracker-hound:trunk
+    jakewharton/qbt-tracker-hound:1
 ```
 
 For Docker Compose, add it as an additional service:
@@ -56,7 +56,7 @@ For Docker Compose, add it as an additional service:
 services:
   qbt-tracker-hound:
     container_name: qbt-tracker-hound
-    image: jakewharton/qbt-tracker-hound:trunk
+    image: jakewharton/qbt-tracker-hound:1
     restart: unless-stopped
     environment:
       - "QBT_HOST=http://qbittorrent:8080"
