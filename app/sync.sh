@@ -7,7 +7,8 @@ fi
 # If the python script fails we want to avoid triggering the health check.
 set -e
 
-/app/sync.py
+source /app/.venv/bin/activate
+python3 /app/sync.py
 
 # Print something since the script otherwise has no output if nothing changes.
 echo "Done"

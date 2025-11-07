@@ -1,5 +1,3 @@
-#!/usr/bin/python3 -u
-
 import os
 from qbittorrentapi import Client
 
