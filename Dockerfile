@@ -1,4 +1,4 @@
-FROM crazymax/alpine-s6:3.13
+FROM crazymax/alpine-s6:3.22
 
 ENV \
     # Fail if cont-init scripts exit with non-zero code.
