@@ -1,7 +1,7 @@
 import os
 from qbittorrentapi import Client
 
-DEBUG = os.environ['DEBUG'] == 'true'
+DEBUG = os.environ.get('DEBUG') == 'true'
 
 TAG = os.environ['QBT_TAG']
 HOST = os.environ['QBT_HOST']
