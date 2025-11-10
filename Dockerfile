@@ -1,7 +1,7 @@
 FROM crazymax/alpine-s6:3.22
 
+# Fail if cont-init scripts exit with non-zero code.
 ENV \
-    # Fail if cont-init scripts exit with non-zero code.
     S6_BEHAVIOUR_IF_STAGE2_FAILS=2 \
     CRON="*/5 * * * *" \
     HEALTHCHECK_ID="" \
